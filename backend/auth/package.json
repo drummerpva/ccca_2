@@ -1,0 +1,51 @@
+{
+  "name": "clean-tdd-branas_2",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=18.16.0 <19.0.0"
+  },
+  "description": "",
+  "main": "dist/main-api.js",
+  "scripts": {
+    "dev": "tsx watch --ignore ./test src/main.ts",
+    "dev:api": "tsx watch --ignore ./test src/main-api.ts",
+    "dev:cli": "tsx watch --ignore ./test src/main-cli.ts",
+    "dev:queue": "tsx watch --ignore ./test src/main-queue.ts",
+    "build": "tsup src/**/*.ts src/*.ts ./dist",
+    "start": "node dist/main-api.js",
+    "test": "vitest watch --no-threads",
+    "test:coverage": "vitest run --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rocketseat/eslint-config": "^2.1.0",
+    "@types/amqplib": "^0.10.1",
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17",
+    "@types/jsonwebtoken": "^9.0.2",
+    "@types/node": "^20.4.5",
+    "@types/sinon": "^10.0.15",
+    "@types/supertest": "^2.0.12",
+    "@vitest/coverage-v8": "^0.33.0",
+    "eslint": "^8.46.0",
+    "sinon": "^15.2.0",
+    "supertest": "^6.3.3",
+    "tsup": "^7.1.0",
+    "tsx": "^3.12.7",
+    "typescript": "^5.1.6",
+    "vitest": "^0.33.0"
+  },
+  "dependencies": {
+    "@fastify/cors": "^8.3.0",
+    "@hapi/hapi": "^21.3.2",
+    "amqplib": "^0.10.3",
+    "axios": "^1.4.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "fastify": "^4.21.0",
+    "jsonwebtoken": "^9.0.1",
+    "mysql2": "^3.5.2"
+  }
+}
